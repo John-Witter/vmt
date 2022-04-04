@@ -60,7 +60,7 @@
     "react-dev-utils": "^5.0.1",
     "react-dom": "^16.13.0",
     "react-draggable": "^3.0.5",
-    "react-emotion": "^9.2.10",
+    "react-emotion": "^10.0.0",
     "react-load-script": "0.0.6",
     "react-onclickoutside": "^6.7.1",
     "react-papaparse": "^3.17.1",
