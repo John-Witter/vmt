@@ -277,6 +277,14 @@ module.exports = function() {
       if (callback) callback(null, {});
     });
 
+    socket.on('REQUEST_CONTROL', (data, callback) => {
+      socketMetricInc('requestcontrol');
+
+      controllers.messages.post(data);
+      socket.to(data.room).emit('CONTROL_REQUESTED', data);
+      if (callback) callback(null, {});
+    });
+
     socket.on('SEND_EVENT', async (data, lastEventId, callback) => {
       socketMetricInc('eventsend');
       try {
